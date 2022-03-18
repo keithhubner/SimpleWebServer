@@ -25,9 +25,6 @@ else
   echo "Kubectl installed ✅"
 fi
 
-# # Start minikube
-# minikube start
-
 # Set docker env
 eval $(minikube docker-env)        
 
