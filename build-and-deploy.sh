@@ -41,6 +41,18 @@ kubectl get pods
 
 # #Local host file, check the ip of minikube and put instructions
 
+echo "Checking site 🌏"
+
+if [ "$(curl -sL -w '%{http_code}' http://local.ecosia.org/tree -o /dev/null)" = "200" ]; then
+    echo "Success"
+else
+    echo "Fail"
+fi
+
+
+if [curl http://local.ecosia.org/tree ]
+
+curl http://local.ecosia.org/tree
 
 
 echo "Please update your host file and point local.ecosia.org to: `minikube ip` " 

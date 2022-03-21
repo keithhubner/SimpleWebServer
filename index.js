@@ -17,7 +17,7 @@ const requestListener = function (req, res) {
                 // 200 OK response
                 res.writeHead(200);
                 res.write(`{"myFavouriteTree":oak}`);
-                console.log('200 OK');
+                
                 break;
             default:
                 // 400 Not Found 
@@ -37,4 +37,26 @@ server.listen(port, host, () => {
 });
 
 
+// Simple software test to check response code
 
+const options = {
+  hostname: 'localhost',
+  port: 8000,
+  path: '/tree',
+  method: 'GET'
+}
+
+const req = http.request(options, res => {
+  console.log(`statusCode: ${res.statusCode}`)
+
+
+  res.on('data', d => {
+    process.stdout.write(d)
+  })
+})
+
+req.on('error', error => {
+  console.error(error)
+})
+
+req.end()
