@@ -12,24 +12,22 @@ In order to run the build and deploy script you should have the following instal
 - Minkube 
 - Kubectl 
 
-Setting up these programs the the local environment are beyond the scope of this document
+> Setting up these programs the the local environment are beyond the scope of this document
 
 
 ## Getting Started 
 
-First clone this repo:
-
-Then run the following script:
+First clone the repo, then run the build script:
 
 ```
 sh build-and-deploy.sh
 ```
 
-You should see the image being created locally and then be deployed into kubernetes.
+You should see the image being created locally and then be deployed into minikube.
 
 > Make sure you update your local host file with the correct IP, this should be given to you from the script.
 
-You can access the site using:
+You can access the site using and you should receive a JSON response:
 
 http://local.ecosia.org/tree
 
