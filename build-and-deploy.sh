@@ -49,12 +49,6 @@ else
     echo "Fail"
 fi
 
-
-if [curl http://local.ecosia.org/tree ]
-
-curl http://local.ecosia.org/tree
-
-
 echo "Please update your host file and point local.ecosia.org to: `minikube ip` " 
 
 echo "You can now access the app http://local.ecosia.org/tree"
